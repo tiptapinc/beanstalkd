@@ -24,6 +24,7 @@ template template_path do
   variables(
     :opts => node['beanstalkd']['opts'],
     :listen_addr => node['beanstalkd']['listen_addr'],
+    :listen_port => node['beanstalkd']['listen_port'],
     :start_during_boot => node['beanstalkd']['start_during_boot']
   )
   notifies :restart, 'service[beanstalkd]'
